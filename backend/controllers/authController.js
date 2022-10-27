@@ -53,6 +53,7 @@ exports.signIn=async(req,res)=>{
 }
 exports.current=async(req,res)=>{
     try {
+        console.log(req.user.id)
         const user=await User.findById(req.user.id)
         res.send(user)
     } catch (error) {
